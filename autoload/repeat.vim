@@ -149,16 +149,16 @@ nnoremap <silent> <Plug>(RepeatUndoLine) :<C-U>call repeat#wrap('U',v:count)<CR>
 nnoremap <silent> <Plug>(RepeatRedo)     :<C-U>call repeat#wrap("\<Lt>C-R>",v:count)<CR>
 
 if !hasmapto('<Plug>(RepeatDot)', 'n')
-    nmap . <Plug>(RepeatDot)
+    nmap <tab> <Plug>(RepeatDot)
 endif
 if !hasmapto('<Plug>(RepeatUndo)', 'n')
-    nmap u <Plug>(RepeatUndo)
+    nmap v <Plug>(RepeatUndo)
 endif
 if maparg('U','n') ==# '' && !hasmapto('<Plug>(RepeatUndoLine)', 'n')
-    nmap U <Plug>(RepeatUndoLine)
+    nmap V <Plug>(RepeatUndoLine)
 endif
 if !hasmapto('<Plug>(RepeatRedo)', 'n')
-    nmap <C-R> <Plug>(RepeatRedo)
+    nmap z <Plug>(RepeatRedo)
 endif
 
 augroup repeatPlugin
